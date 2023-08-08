@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full bottom-0 flex py-6 justify-between items-center navbar transition-all duration-200">
+    <nav className="w-full bottom-0 flex py-6 justify-between items-center navbar transition-all duration-200" data-aos='zoom-in' data-aos-duration='1300'>
 
       <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
 

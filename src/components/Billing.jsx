@@ -12,7 +12,7 @@ const Billing = () => (
       {/* gradient end */}
     </div>
 
-    <div className={layout.sectionInfo}>
+    <div className={layout.sectionInfo} data-aos='fade-up'>
       <h2 className={styles.heading2} >
         Crafting Dynamic Digital Experiences: <br className="sm:block hidden" />  Building Responsive Web Applications <br className="sm:block hidden" /> For Your Business
       </h2>
