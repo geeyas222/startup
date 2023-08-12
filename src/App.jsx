@@ -28,32 +28,31 @@ const App = () => {
     <div className='bg-primary w-full overflow-hidden'>
       <div className={` ${styles.paddingX} ${styles.flexCenter}  fixed top-0 left-0 w-full p-1 z-50 ${scrolled ? 'bg-primary shadow-lg rounded-full bg-opacity-60' : ''}`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar />
+          <Navbar />{/*Navigation Bar  */}
         </div>
       </div>
 
       <div className={`bg-primary ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Hero />
+          <Hero /> {/*Hero section with slogan and image on side  */}
         </div>
       </div>
 
       <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Stats />
-          <Billing />
-          <CardDeal />
-          <Business />
-          <Project />
-          <Price />
-          {/* <Testomonials /> */}
-          {/* <Client /> */}
-          <CTA />
-          <Aboutus />
-          <Footer />
+          <Stats /> {/*Stats with counter  */}
+          <Billing /> {/*responsice web app building service */}
+          <CardDeal /> {/*Tech Support service*/}
+          <Business /> {/*Design webapp for business service*/}
+          <Project /> {/*projects*/}
+          <Price /> {/*price cards*/}
+          <CTA /> {/*contact us Form*/}
+          <Aboutus /> {/*About us Section*/}
+          <Footer /> {/*Footer section*/}
         </div>
       </div>
-
+      {/* <Testomonials /> */}
+      {/* <Client /> */}
     </div>
   )
 }
