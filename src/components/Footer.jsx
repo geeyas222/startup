@@ -4,9 +4,8 @@ import { footerLinks, socialMedia } from "../constants";
 
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
-    <hr className="border-none bg-gradient-to-r from-white via-white to-transparent h-1 w-full shadow-md transform translate-y-1" />
     <br className="sm:block hidden" />
-    <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
+    <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full pt-4 border-t-[1px] border-t-[#3F3E45]`}>
       <div className="flex-[1] flex flex-col justify-start mr-10">
         <img
           src={logo}
