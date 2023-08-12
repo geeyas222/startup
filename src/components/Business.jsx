@@ -20,7 +20,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
 
 const Business = () => (
   <section id="features" className={layout.section}>
-    <div className={layout.sectionInfo}>
+    <div className={layout.sectionInfo} data-aos='fade-right'>
       <h2 className={styles.heading2}>
         Focus Business, <br className="sm:block hidden " /> We'll Shape and<br className="sm:block hidden" /> Elevate Your Online Presence.
       </h2>
@@ -31,7 +31,7 @@ const Business = () => (
       {/* <Button styles={`mt-10`} /> */}
     </div>
 
-    <div className={`${layout.sectionImg} flex-col`}>
+    <div className={`${layout.sectionImg} flex-col`} data-aos='fade-left'>
       {features.map((feature, index) => (
         <FeatureCard key={feature.id} {...feature} index={index} />
       ))}

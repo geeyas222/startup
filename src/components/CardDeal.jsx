@@ -1,10 +1,9 @@
 import { card } from "../assets";
 import styles, { layout } from "../style";
-import Button from "./Button";
 
 const CardDeal = () => (
   <section className={layout.section}>
-    <div className={layout.sectionInfo}>
+    <div className={layout.sectionInfo} data-aos='fade-left'>
       <h2 className={styles.heading2}>
         We fix your IT problems <br className="sm:block hidden" /> <span className="text-3xl">Small</span> to <span className="text-7xl">Big</span>
       </h2>
@@ -20,7 +19,7 @@ const CardDeal = () => (
       </button>
     </div>
 
-    <div className={layout.sectionImg}>
+    <div className={layout.sectionImg} data-aos='fade-right'>
       <img src={card} alt="billing" className="w-[100%] h-[100%]" />
     </div>
   </section>

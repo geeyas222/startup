@@ -13,14 +13,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#000000" />
-  <title>HooBank</title>
+  <title>OurssTech</title>
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
   <script>
-    AOS.init();
+    AOS.init(
+      {
+        // Global settings:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 100, // values from 0 to 3000, with step 50ms
+        duration: 2000, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      }
+    );
   </script>
 
 </body>
