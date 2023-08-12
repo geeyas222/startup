@@ -3,7 +3,7 @@ import styles, { layout } from "../style";
 
 const Billing = () => (
   <section id="service" className={layout.sectionReverse}>
-    <div className={layout.sectionImgReverse}>
+    <div className={layout.sectionImgReverse} data-aos='fade-right'>
       <img src={bill} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
 
       {/* gradient start */}
@@ -12,7 +12,7 @@ const Billing = () => (
       {/* gradient end */}
     </div>
 
-    <div className={layout.sectionInfo} data-aos='fade-up'>
+    <div className={layout.sectionInfo} data-aos='fade-left'>
       <h2 className={styles.heading2} >
         Crafting Dynamic Digital Experiences: <br className="sm:block hidden" />  Building Responsive Web Applications <br className="sm:block hidden" /> For Your Business
       </h2>
