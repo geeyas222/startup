@@ -3,7 +3,7 @@ import styles from "../style";
 const Price = ({ title, description, price, features }) => {
     return (
 
-        <div className="bg-blue-[800] shadow-xl shadow-white hover:shadow-2xl hover:shadow-blue rounded-lg p-6 w-full md:w-1/4" id="price">
+        <div className="bg-black-gradient-2 shadow-xl shadow-gray-500 hover:shadow-2xl hover:shadow-blue rounded-lg p-6 w-full md:w-1/4" id="price" data-aos='fade-up'>
             <h2 className="text-3xl font-bold text-white sm:underline md:underline underline text-left sm:text-center md:text-center">{title}</h2>
             <p className="mt-4 text-white">{description}</p>
             <div className="mt-6">
@@ -65,6 +65,7 @@ const PriceCards = () => {
             {cards.map((card, index) => (
                 <Price key={index} {...card} />
             ))}
+            <br className="sm:block hidden" />
         </div>
     );
 };
