@@ -1,4 +1,5 @@
 import styles from "../style";
+import { cards } from "../constants/index";
 
 const Price = ({ title, description, price, features }) => {
     return (
@@ -39,29 +40,9 @@ const Price = ({ title, description, price, features }) => {
 };
 
 const PriceCards = () => {
-    const cards = [
-        {
-            title: 'Basic Plan',
-            description: 'Perfect for getting started.',
-            price: '$19',
-            features: ['Unlimited access', '24/7 Customer support', 'Access to premium features'],
-        },
-        {
-            title: 'Pro Plan',
-            description: 'For those who need more.',
-            price: '$39',
-            features: ['All Basic features', 'Advanced analytics', 'Priority support'],
-        },
-        {
-            title: 'Enterprise Plan',
-            description: 'For large businesses.',
-            price: '$99',
-            features: ['All Pro features', 'Dedicated account manager', 'Custom solutions'],
-        },
-    ];
-
     return (
         <div className="flex flex-wrap justify-center gap-8">
+            {/* Below 'cards' is mapping from the json file which is coming from index.js file from components */}
             {cards.map((card, index) => (
                 <Price key={index} {...card} />
             ))}

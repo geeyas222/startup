@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import styles from './style';
-import { Navbar, Hero, Stats, Business, CardDeal, Testomonials, Client, CTA, Footer, Billing } from './components';
+import { Navbar, Hero, Stats, Business, CardDeal, CTA, Footer, Billing, } from './components';
 import Project from './components/Project';
 import Price from "./components/Price";
 import Aboutus from "./components/Aboutus";
+// import Testimonials from "./components/testomonials";
 
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
