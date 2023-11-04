@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
             Empowering<br className="sm:block hidden" />{" "} Your Tomorrow,<br className="sm:block hidden" />{" "}Today with<br className="sm:block hidden" />{" "}
-            <span className="text-gradient">OurssTech</span>{" "}
+            <span className="text-gradient">SoftHat</span>{" "}
           </h1>
           <div className="ss:flex hidden md:mr-4 mr-0">
           </div>
@@ -27,7 +27,7 @@ const Hero = () => {
           Solution
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5 text-justify`}>
-          <span className="text-blue-[300]"> "Elevate Your Online Business with <a href="#home" className="text-blue-300"> OurssTech:</a> Designing Solutions, Delivering Success. Your Vision, Our Expertise, Success Achieved. Transforming Challenges into Digital Triumphs. Your Success, Our Commitment."</span>
+          <span className="text-blue-[300]"> "Elevate Your Online Business with <a href="#home" className="text-blue-300"> SoftHat Solution</a> Designing Solutions, Delivering Success. Your Vision, Our Expertise, Success Achieved. Transforming Challenges into Digital Triumphs. Your Success, Our Commitment."</span>
         </p>
       </div>
 

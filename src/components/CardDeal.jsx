@@ -8,9 +8,9 @@ const CardDeal = () => (
         We fix your IT problems <br className="sm:block hidden" /> <span className="text-3xl">Small</span> to <span className="text-7xl">Big</span>
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5 text-justify`}>
-        At <a href="#home" className="text-blue-300">OurssTech</a>, we've got you covered with a comprehensive range of IT solutions. Whether you're facing minor PC troubles or complex tasks like software installation, printer setup, data migration, or network configuration, our expert team is here to provide seamless resolutions. No challenge is too big or small for us trust us to be your go-to partner for all your IT needs.
+        At <a href="#home" className="text-blue-300">SoftHat Solution</a>, we've got you covered with a comprehensive range of IT solutions. Whether you're facing minor PC troubles or complex tasks like software installation, printer setup, data migration, or network configuration, our expert team is here to provide seamless resolutions. No challenge is too big or small for us trust us to be your go-to partner for all your IT needs.
         <br className="sm:block hidden" />
-        <a href="#home" className="text-blue-300"> OurssTech </a> is always there for you!
+        <a href="#home" className="text-blue-300"> SoftHat Solution </a> is always there for you!
       </p>
 
       {/* <Button styles={`mt-10`} /> */}

@@ -106,8 +106,8 @@ export const footerLinks = [
         link: "https://goo.gl/maps/rnXJK6xxnpGeCQ8z9",
       },
       {
-        name: "Email - oursstech@gmail.com",
-        link: "mailto:ourssTech@gmail.com",
+        name: "Email - softhatsolution@gmail.com",
+        link: "mailto:softhatsolution@gmail.com",
       },
       {
         name: "Telphone - +61420024420",
@@ -115,7 +115,7 @@ export const footerLinks = [
       },
       {
         name: "Suggestions for Improvement",
-        link: "https://www.hoobank.com/suggestions/",
+        link: "#contact",
       },
 
     ],
@@ -124,12 +124,12 @@ export const footerLinks = [
     title: "Partner",
     links: [
       {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        name: "Job for SoftHat",
+        link: "#home",
       },
       {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        name: "Job with SoftHat",
+        link: "#home",
       },
     ],
   },
