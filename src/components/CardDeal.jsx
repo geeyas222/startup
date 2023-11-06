@@ -1,4 +1,4 @@
-import { card } from "../assets";
+import { IT } from "../assets";
 import styles, { layout } from "../style";
 
 const CardDeal = () => (
@@ -20,7 +20,7 @@ const CardDeal = () => (
     </div>
 
     <div className={layout.sectionImg} data-aos='fade-right'>
-      <img src={card} alt="billing" className="w-[100%] h-[100%]" />
+      <img src={IT} alt="billing" className="w-[100%] h-[100%]" />
     </div>
   </section>
 );

@@ -24,7 +24,9 @@ import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
 import companyName from "./companyName.png";
-import webman from "./webman.png"
+import webman from "./webman.png";
+import home from './home.png';
+import IT from './IT.png';
 
 
 export {
@@ -54,5 +56,7 @@ export {
   people02,
   people03,
   companyName,
-  webman
+  webman,
+  home,
+  IT
 };
