@@ -50,4 +50,4 @@ const PriceCards = () => {
         </div>
     );
 };
-export default PriceCards
+export default PriceCards;

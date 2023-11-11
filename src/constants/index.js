@@ -13,11 +13,6 @@ export const navLinks = [
     id: "projects",
     title: "Projects",
   },
-
-  {
-    id: "price",
-    title: "Pricing",
-  },
   {
     id: "contact",
     title: "Contact Us",
@@ -101,7 +96,7 @@ export const footerLinks = [
   {
     title: "Contact",
     links: [
-      
+
       {
         name: "Email - softhatsolution@gmail.com",
         link: "mailto:softhatsolution@gmail.com",

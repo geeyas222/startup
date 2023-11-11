@@ -10,6 +10,10 @@ import GetStarted from "./getStarted";
 import Hero from "./hero";
 import Navbar from "./Navbar";
 import Stats from "./stats";
+import Aboutus from "./Aboutus";
+import Project from "./Project";
+import Price from "./Price";
+import StarsCanvas from "./stars";
 // import Testomonials from "./testomonials";
 
 export {
@@ -23,4 +27,8 @@ export {
     Hero,
     Navbar,
     Stats,
+    Aboutus,
+    Project,
+    Price,
+    StarsCanvas
 }
