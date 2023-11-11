@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star } from "../assets";
+import { facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, firstProject, MCGarage, turtleGame, modernPortfolio } from "../assets";
 
 export const navLinks = [
   {
@@ -199,29 +199,8 @@ export const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: star,
+    image: firstProject,
     source_code_link: "https://geeyas.github.io/MyResume/",
-  },
-  {
-    name: "Uni Assignment",
-    description:
-      "I developed this website as my uni assignment on my first year",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Javascript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: star,
-    source_code_link: "http://infotech.scu.edu.au/~gachar10/gacharya_ISY10209_Ass3_index.html",
   },
   {
     name: "Turtle Game (Java project)",
@@ -237,8 +216,25 @@ export const projects = [
         color: "green-text-gradient",
       }
     ],
-    image: star,
+    image: turtleGame,
     source_code_link: "https://www.greenfoot.org/scenarios/26445",
+  },
+  {
+    name: "3D portfolio (NextJS project)",
+    description:
+      "It is a portfolio or an webResume created using NextJS.",
+    tags: [
+      {
+        name: "NextJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind Css",
+        color: "green-text-gradient",
+      }
+    ],
+    image: modernPortfolio,
+    source_code_link: "https://3dportfolioo.netlify.app/",
   },
   {
     name: "Final Year Project",
@@ -266,7 +262,7 @@ export const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: star,
+    image: MCGarage,
     source_code_link: "http://themcgarage.com/",
   },
 ];
