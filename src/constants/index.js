@@ -173,27 +173,7 @@ export const cards = [
 ];
 
 export const projects = [
-  {
-    name: "First Portfolio website",
-    description:
-      "",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Javascript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: firstProject,
-    source_code_link: "https://geeyas.github.io/MyResume/",
-  },
+  
   {
     name: "Turtle Game (Java project)",
     description:
