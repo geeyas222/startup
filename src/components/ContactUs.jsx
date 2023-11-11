@@ -1,5 +1,6 @@
 import styles from "../style";
 import { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
@@ -15,7 +16,6 @@ const ContactUs = () => {
         phone: '',
     });
 
-    // Regular expressions for email and phone validation
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const phoneRegex = /^[0-9]{10}$/;
 
@@ -27,10 +27,9 @@ const ContactUs = () => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Validate all fields before submitting the form
         const newErrors = {
             name: formData.name ? '' : 'Name is required',
             email: emailRegex.test(formData.email) ? '' : 'Invalid email address',
@@ -39,30 +38,46 @@ const ContactUs = () => {
 
         setErrors(newErrors);
 
-        // If there are no errors, you can proceed with form submission
         if (!Object.values(newErrors).some((error) => error !== '')) {
-            // Perform form submission logic here
-            console.log('Form submitted:', formData);
+            // Prepare the email parameters
+            const emailParams = {
+                to_email: "softhatsolution@gmail.com", // Replace with your recipient email address
+                from_name: formData.name,
+                from_email: formData.email,
+                from_phone: formData.phone,
+                message: formData.message,
+            };
 
-            // Reset the form fields
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                message: '',
-            });
+            // Use the EmailJS service to send the email
+            try {
+                await emailjs.send(
+                    'service_aex7qzk', // Replace with your EmailJS service ID
+                    'template_sewp5co', // Replace with your EmailJS template ID
+                    emailParams,
+                    'cL4-EtHANHUHjHF1V' // Replace with your EmailJS user ID
+                );
 
-            // Clear any error messages
-            setErrors({
-                name: '',
-                email: '',
-                phone: '',
-            });
+                console.log('Email sent successfully');
+
+                // Reset the form fields
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: '',
+                });
+
+                // Clear any error messages
+                setErrors({
+                    name: '',
+                    email: '',
+                    phone: '',
+                });
+            } catch (error) {
+                console.error('Error sending email:', error);
+            }
         }
-
-
     };
-
     return (
         <section data-aos='fade-left'>
             <form className='p-1' onSubmit={handleSubmit}>
