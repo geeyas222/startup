@@ -28,6 +28,7 @@ import webman from "./webman.png";
 import home from './home.png';
 import IT from './IT.png';
 import softHatGif from './Softhat.gif';
+import openLink from './open.png';
 
 
 export {
@@ -60,5 +61,6 @@ export {
   webman,
   home,
   IT,
-  softHatGif
+  softHatGif,
+  openLink
 };

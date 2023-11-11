@@ -179,3 +179,94 @@ export const cards = [
     features: ['All Pro features', 'Dedicated account manager', 'Custom solutions'],
   },
 ];
+
+export const projects = [
+  {
+    name: "First Portfolio website",
+    description:
+      "I made this portfolio website on my first year of Uni to test and elaborate my skills of HTML, CSS and Javascript",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: star,
+    source_code_link: "https://geeyas.github.io/MyResume/",
+  },
+  {
+    name: "Uni Assignment",
+    description:
+      "I developed this website as my uni assignment on my first year",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: star,
+    source_code_link: "http://infotech.scu.edu.au/~gachar10/gacharya_ISY10209_Ass3_index.html",
+  },
+  {
+    name: "Turtle Game (Java project)",
+    description:
+      "It is a Uni assignment developed on my second year using Java language.",
+    tags: [
+      {
+        name: "Java",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Greenfoot (IDE)",
+        color: "green-text-gradient",
+      }
+    ],
+    image: star,
+    source_code_link: "https://www.greenfoot.org/scenarios/26445",
+  },
+  {
+    name: "Final Year Project",
+    description:
+      "It is our final year project developed with my team. We searched for a real client and based on his requirements that he need for his business we developed this website. We followed agile methodology as a project management. We used Jira and confluence to keep track of our work and assign task to eachother (Tutor was our scrum master).",
+    tags: [
+      {
+        name: "Angular",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MySQl",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Relational Database (AWS)",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "EC2 (AWS - Hosting)",
+        color: "green-text-gradient",
+      },
+    ],
+    image: star,
+    source_code_link: "http://themcgarage.com/",
+  },
+];
