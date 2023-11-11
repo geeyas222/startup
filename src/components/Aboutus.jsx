@@ -1,5 +1,5 @@
 import styles from "../style";
-import { companyName } from "../assets";
+import { softHatGif } from "../assets";
 
 const Aboutus = () => {
     return (
@@ -14,9 +14,9 @@ const Aboutus = () => {
                     </div>
                     <div className="md:w-1/2 p-6">
                         <img
-                            src={companyName}
+                            src={softHatGif}
                             alt="Team"
-                            className="rounded-lg"
+                            className="rounded-t-3xl border-4 border-slate-900 shadow-2xl "
                             data-aos='fade-left'
                         />
                     </div>

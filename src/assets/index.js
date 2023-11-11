@@ -27,6 +27,7 @@ import companyName from "./companyName.png";
 import webman from "./webman.png";
 import home from './home.png';
 import IT from './IT.png';
+import softHatGif from './Softhat.gif';
 
 
 export {
@@ -58,5 +59,6 @@ export {
   companyName,
   webman,
   home,
-  IT
+  IT,
+  softHatGif
 };
