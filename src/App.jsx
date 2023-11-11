@@ -46,7 +46,7 @@ const App = () => {
           <CardDeal /> {/*Tech Support service*/}
           <Business /> {/*Design webapp for business service*/}
           <Project /> {/*projects*/}
-          <Price /> {/*price cards*/}
+          {/* <Price /> price cards */}
           <CTA /> {/*contact us Form*/}
           <Aboutus /> {/*About us Section*/}
           <Footer /> {/*Footer section*/}
