@@ -4,7 +4,7 @@ import binance from "./binance.png";
 import card from "./card.png";
 import coinbase from "./coinbase.png";
 import dropbox from "./dropbox.png";
-import logo from "./logoo.svg";
+import logo from "./logoo.png";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
 import send from "./Send.svg";
@@ -20,13 +20,17 @@ import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
-import people01 from "./people01.png";
-import people02 from "./people02.png";
-import people03 from "./people03.png";
+
 import companyName from "./companyName.png";
 import webman from "./webman.png";
 import home from './home.png';
 import IT from './IT.png';
+import softHatGif from './Softhat.gif';
+import openLink from './open.png';
+import firstProject from "./firstPort.png";
+import turtleGame from "./greenfoot.png";
+import MCGarage from "./mcgarage.png";
+import modernPortfolio from "./3d.png"
 
 
 export {
@@ -52,11 +56,14 @@ export {
   instagram,
   linkedin,
   twitter,
-  people01,
-  people02,
-  people03,
   companyName,
   webman,
   home,
-  IT
+  IT,
+  softHatGif,
+  openLink,
+  firstProject,
+  turtleGame,
+  MCGarage,
+  modernPortfolio
 };
