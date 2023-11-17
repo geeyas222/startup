@@ -40,7 +40,7 @@ const ContactUs = () => {
             email: emailRegex.test(formData.email) ? '' : 'Invalid email address',
             phone: phoneRegex.test(formData.phone) ? '' : 'Invalid phone number',
         };
-        showSuccess('Submitted Successfully');
+        
         setErrors(newErrors);
 
         if (!Object.values(newErrors).some((error) => error !== '')) {
@@ -69,7 +69,7 @@ const ContactUs = () => {
                     phone: '',
                     message: '',
                 });
-
+                showSuccess('Submitted Successfully');
                 // Clear any error messages
                 setErrors({
                     name: '',
