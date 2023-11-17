@@ -1,7 +1,9 @@
 import styles from "../style";
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Spinner from "./Spinner";
 const ContactUs = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -18,7 +20,7 @@ const ContactUs = () => {
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const phoneRegex = /^[0-9]{10}$/;
-
+    const [isSpinner, setSpinner] = useState(false);
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
@@ -26,18 +28,22 @@ const ContactUs = () => {
             [name]: value,
         }));
     };
-
+    const showSuccess = (message) => {
+        toast.success(message);
+    }
+    const showError = (message) => {
+        toast.error(message);
+    }
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         const newErrors = {
             name: formData.name ? '' : 'Name is required',
             email: emailRegex.test(formData.email) ? '' : 'Invalid email address',
             phone: phoneRegex.test(formData.phone) ? '' : 'Invalid phone number',
         };
-
+        
         setErrors(newErrors);
-
+        setSpinner(true);
         if (!Object.values(newErrors).some((error) => error !== '')) {
             // Prepare the email parameters
             const emailParams = {
@@ -56,9 +62,7 @@ const ContactUs = () => {
                     emailParams,
                     'cL4-EtHANHUHjHF1V' // Replace with your EmailJS user ID
                 );
-
-                console.log('Email sent successfully');
-
+                    showSuccess('Email sent successfully')
                 // Reset the form fields
                 setFormData({
                     name: '',
@@ -66,7 +70,8 @@ const ContactUs = () => {
                     phone: '',
                     message: '',
                 });
-
+                setSpinner(false);
+                showSuccess('Submitted Successfully');
                 // Clear any error messages
                 setErrors({
                     name: '',
@@ -74,6 +79,7 @@ const ContactUs = () => {
                     phone: '',
                 });
             } catch (error) {
+                showError('Error sending email');
                 console.error('Error sending email:', error);
             }
         }
@@ -113,7 +119,8 @@ const ContactUs = () => {
 
                 <div>
                     <button type="submit" className={`w-[300px] md:w-[300px] sm:w-[200px] py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles} mt-10`}>
-                        {/* <a href="/">Submit</a> */}Submit
+                    {isSpinner ? <Spinner /> : ''}
+                        Submit
                     </button>
                 </div>
             </form>

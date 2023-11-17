@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import styles from './style';
 import { Navbar, Hero, Stats, Business, CardDeal, CTA, Footer, Billing, Aboutus, Project, StarsCanvas, IdeaDrop } from './components';
 import { BrowserRouter } from "react-router-dom";
-
-
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -66,8 +66,7 @@ const App = () => {
         {/* <Testomonials /> */}
         {/* <Client /> */}
       </div>
-
-
+      <ToastContainer closeButton={false} position="top-right" />
     </BrowserRouter>
   )
 }
