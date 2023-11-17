@@ -1,8 +1,9 @@
 import styles from "../style";
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { toast, Zoom } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Spinner from "./Spinner";
 const ContactUs = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -19,7 +20,7 @@ const ContactUs = () => {
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const phoneRegex = /^[0-9]{10}$/;
-
+    const [isSpinner, setSpinner] = useState(false);
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
@@ -42,7 +43,7 @@ const ContactUs = () => {
         };
         
         setErrors(newErrors);
-
+        setSpinner(true);
         if (!Object.values(newErrors).some((error) => error !== '')) {
             // Prepare the email parameters
             const emailParams = {
@@ -69,6 +70,7 @@ const ContactUs = () => {
                     phone: '',
                     message: '',
                 });
+                setSpinner(false);
                 showSuccess('Submitted Successfully');
                 // Clear any error messages
                 setErrors({
@@ -117,7 +119,8 @@ const ContactUs = () => {
 
                 <div>
                     <button type="submit" className={`w-[300px] md:w-[300px] sm:w-[200px] py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles} mt-10`}>
-                        {/* <a href="/">Submit</a> */}Submit
+                    {isSpinner ? <Spinner /> : ''}
+                        Submit
                     </button>
                 </div>
             </form>
