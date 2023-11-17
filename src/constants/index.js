@@ -1,4 +1,5 @@
 import { facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, firstProject, MCGarage, turtleGame, modernPortfolio } from "../assets";
+import dropIdea from '../components/dropidea';
 
 export const navLinks = [
   {
@@ -151,29 +152,8 @@ export const socialMedia = [
 ];
 
 
-export const cards = [
-  {
-    title: 'Basic Plan',
-    description: 'Perfect for getting started.',
-    price: '$19',
-    features: ['Unlimited access', '24/7 Customer support', 'Access to premium features'],
-  },
-  {
-    title: 'Pro Plan',
-    description: 'For those who need more.',
-    price: '$39',
-    features: ['All Basic features', 'Advanced analytics', 'Priority support'],
-  },
-  {
-    title: 'Enterprise Plan',
-    description: 'For large businesses.',
-    price: '$99',
-    features: ['All Pro features', 'Dedicated account manager', 'Custom solutions'],
-  },
-];
-
 export const projects = [
-  
+
   {
     name: "Turtle Game (Java project)",
     description:

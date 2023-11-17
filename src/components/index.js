@@ -12,8 +12,8 @@ import Navbar from "./Navbar";
 import Stats from "./stats";
 import Aboutus from "./Aboutus";
 import Project from "./Project";
-import Price from "./Price";
 import StarsCanvas from "./stars";
+import IdeaDrop from "./dropidea";
 // import Testomonials from "./testomonials";
 
 export {
@@ -29,6 +29,6 @@ export {
     Stats,
     Aboutus,
     Project,
-    Price,
-    StarsCanvas
+    StarsCanvas,
+    IdeaDrop
 }

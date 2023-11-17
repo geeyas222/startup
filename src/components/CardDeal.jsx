@@ -20,7 +20,7 @@ const CardDeal = () => (
     </div>
 
     <div className={layout.sectionImg} data-aos='fade-right'>
-      <img src={IT} alt="billing" className="w-[100%] h-[100%]" />
+      <img src={IT} alt="IT Services" className="w-[100%] h-[100%]" />
     </div>
   </section>
 );
