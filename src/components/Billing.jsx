@@ -1,4 +1,4 @@
-import { apple, webman, google } from "../assets";
+import { webman } from "../assets";
 import styles, { layout } from "../style";
 
 const Billing = () => (

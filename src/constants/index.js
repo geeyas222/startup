@@ -1,4 +1,4 @@
-import { facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, firstProject, MCGarage, turtleGame, modernPortfolio } from "../assets";
+import { facebook, instagram, linkedin, twitter, send, shield, star, MCGarage, turtleGame, modernPortfolio } from "../assets";
 import dropIdea from '../components/dropidea';
 
 export const navLinks = [
@@ -132,12 +132,12 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: instagram,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/softhat_aus/",
   },
   {
     id: "social-media-2",
     icon: facebook,
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/softhat",
   },
   {
     id: "social-media-3",
