@@ -1,7 +1,8 @@
 import styles from "../style";
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
-
+import { toast, Zoom } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ContactUs = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -26,16 +27,20 @@ const ContactUs = () => {
             [name]: value,
         }));
     };
-
+    const showSuccess = (message) => {
+        toast.success(message);
+    }
+    const showError = (message) => {
+        toast.error(message);
+    }
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         const newErrors = {
             name: formData.name ? '' : 'Name is required',
             email: emailRegex.test(formData.email) ? '' : 'Invalid email address',
             phone: phoneRegex.test(formData.phone) ? '' : 'Invalid phone number',
         };
-
+        showSuccess('Submitted Successfully');
         setErrors(newErrors);
 
         if (!Object.values(newErrors).some((error) => error !== '')) {
@@ -56,9 +61,7 @@ const ContactUs = () => {
                     emailParams,
                     'cL4-EtHANHUHjHF1V' // Replace with your EmailJS user ID
                 );
-
-                console.log('Email sent successfully');
-
+                    showSuccess('Email sent successfully')
                 // Reset the form fields
                 setFormData({
                     name: '',
@@ -74,6 +77,7 @@ const ContactUs = () => {
                     phone: '',
                 });
             } catch (error) {
+                showError('Error sending email');
                 console.error('Error sending email:', error);
             }
         }
