@@ -156,64 +156,16 @@ export const projects = [
 
   {
     name: "Turtle Game (Java project)",
-    description:
-      "",
-    tags: [
-      {
-        name: "Java",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Greenfoot (IDE)",
-        color: "green-text-gradient",
-      }
-    ],
     image: turtleGame,
     source_code_link: "https://www.greenfoot.org/scenarios/26445",
   },
   {
     name: "3D portfolio (NextJS project)",
-    description:
-      "",
-    tags: [
-      {
-        name: "NextJS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Tailwind Css",
-        color: "green-text-gradient",
-      }
-    ],
     image: modernPortfolio,
     source_code_link: "https://3dportfolioo.netlify.app/",
   },
   {
     name: "Small Business",
-    description:
-      "",
-    tags: [
-      {
-        name: "Angular",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Typescript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "MySQl",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Relational Database (AWS)",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "EC2 (AWS - Hosting)",
-        color: "green-text-gradient",
-      },
-    ],
     image: MCGarage,
     source_code_link: "http://themcgarage.com/",
   },
