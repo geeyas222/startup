@@ -20,10 +20,8 @@ import star from "./Star.svg";
 import shield from "./Shield.svg";
 import send from "./Send.svg";
 import twitter from "./twitter.svg";
-import animLogo from "./Animation.gif";
 
 export {
-  animLogo,
   logo,
   menu,
   close,
