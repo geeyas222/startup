@@ -38,14 +38,14 @@ const Navbar = () => {
 
       <nav className="w-full bottom-0 flex py-6 justify-between items-center navbar transition-all duration-200" data-aos='zoom-in-down' data-aos-duration='1300'>
 
-        <img src={logo} alt="hoobank" className="w-[244px] h-[32px]" loading="lazy"/>
+        <img src={logo} alt="hoobank" className={`w-[222px] h-[32px]`} loading="lazy" />
 
         <ul className="list-none sm:flex hidden justify-end items-center flex-1">
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
               className={`font-poppins font-normal cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
-                } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"} ${scrolled ? 'text-xl font-white' : ''} transition-all duration-2000`}
+                } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"} ${scrolled ? 'text-xl font-white mr-6 ml-1' : ''} transition-all duration-1500`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
