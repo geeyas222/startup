@@ -51,14 +51,12 @@ const App = () => {
               <CardDeal /> {/*Tech Support service*/}
               <Business /> {/*Design webapp for business service*/}
               <Project /> {/*projects*/}
-              <div className="relative z-0">
-                <StarsCanvas />
-                <CTA /> {/*contact us Form*/}
-              </div>
-              <div className="relative z-0">
-                <StarsCanvas />
-                <Aboutus /> {/*About us Section*/}
-              </div>
+
+              <CTA /> {/*contact us Form*/}
+
+
+              <Aboutus /> {/*About us Section*/}
+
               <Footer /> {/*Footer section*/}
             </div>
           </div>
