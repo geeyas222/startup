@@ -22,7 +22,7 @@ const ModalDialog = ({isOpen, closeModal}) => {
     style={customStyles}>
       <h2>Modal Title</h2>
       <p>Some text in the Modal...</p>
-      <button onClick={closeModal}>Close Modal</button>
+      <button stype="button" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none mt-10`} onClick={closeModal}>Close Modal</button>
     </Modal>
   )
 }
