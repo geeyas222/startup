@@ -2,8 +2,14 @@ import { useState } from "react";
 import { IT } from "../assets";
 import { Helmet } from "react-helmet";
 import styles, { layout } from "../style";
+import ModalDialog from "./ModalDialog";
 
 const CardDeal = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   return (
     <>
@@ -28,8 +34,8 @@ const CardDeal = () => {
           </p>
 
           {/* <Button styles={`mt-10`} /> */}
-          <button type="button" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles} mt-10`}>
-            <a href="#service">Services</a>
+          <button onClick={() => setModalIsOpen(true)} type="button" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles} mt-10`}>
+            <a >Services</a>
           </button>
 
         </div>
@@ -37,6 +43,8 @@ const CardDeal = () => {
         <div className={layout.sectionImg} data-aos='fade-right'>
           <img src={IT} alt="IT Services" className="w-[100%] h-[100%]" loading="lazy" />
         </div>
+        <ModalDialog
+         isOpen={modalIsOpen} closeModal={closeModal} />
       </section>
     </>
   );

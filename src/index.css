@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.ReactModal__Overlay {
+  z-index: 10000 !important;
+  background-color: rgb(73 63 63 / 75%) !important;
+ }
+
 :root {
   --black-gradient: linear-gradient(144.39deg,
       #ffffff -278.56%,
@@ -132,5 +137,7 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+
 
 @keyframes spinner-animation { 100% { transform: rotate(360deg) } }
