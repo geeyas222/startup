@@ -43,8 +43,7 @@ const CardDeal = () => {
         <div className={layout.sectionImg} data-aos='fade-right'>
           <img src={IT} alt="IT Services" className="w-[100%] h-[100%]" loading="lazy" />
         </div>
-        <ModalDialog
-         isOpen={modalIsOpen} closeModal={closeModal} />
+        <ModalDialog isOpen={modalIsOpen} closeModal={closeModal} />
       </section>
     </>
   );
