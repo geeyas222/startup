@@ -1,5 +1,4 @@
 import { facebook, instagram, linkedin, twitter, send, shield, star, MCGarage, turtleGame, modernPortfolio } from "../assets";
-import dropIdea from '../components/dropidea';
 
 export const navLinks = [
   {
@@ -170,3 +169,36 @@ export const projects = [
     source_code_link: "http://themcgarage.com/",
   },
 ];
+
+export const services = [
+  {
+    id: "1",
+    title: "Web Designing",
+    value: "Transform your online presence with our expert web design. We craft visually stunning and user-friendly websites tailored to your brand. From responsive layouts to seamless navigation, we ensure a memorable user experience that captivates your audience. Elevate your business with a modern and professionally designed website that looks great and drives results. Let us bring your vision to life and create a digital platform that sets you apart online."
+  },
+  {
+    id: "2",
+    title: "Web Development",
+    value: "Revolutionize your digital footprint with our top-tier web development. We specialize in creating dynamic, high-performance websites and web applications that meet the unique needs of your business. Our expert developers utilize the latest technologies to build robust, scalable, and secure solutions. Whether you're looking for an e-commerce platform, a content management system, or a custom web application, we have the expertise to bring your ideas to life. Maximize your online potential and stay ahead of the competition with our cutting-edge web development. ",
+  },
+  {
+    id: "3",
+    title: "eCommerce",
+    value: "Power your online business with our comprehensive eCommerce solutions. From seamless user interfaces to secure payment gateways, we specialize in creating custom, user-friendly online stores that drive sales and enhance customer satisfaction. Our eCommerce development covers everything from platform selection to responsive design, ensuring a consistent and engaging shopping experience across devices. Elevate your brand, streamline your sales process, and boost your bottom line with our tailored eCommerce solutions. Let us build the perfect online storefront to showcase your products to a global audience. ",
+  },
+  {
+    id: "4",
+    title: "App Development",
+    value: "Bring your ideas to life with our expert app development. We specialize in creating innovative and functional mobile applications for iOS and Android platforms. Our skilled development team ensures a seamless and user-friendly experience from concept to deployment. Whether you need a business app, a productivity tool, or a consumer-facing application, we leverage the latest technologies to deliver high-performance solutions. Unlock the full potential of mobile technology and stay ahead in the digital landscape with our custom app development. Let us turn your vision into a powerful, engaging, and feature-rich mobile application.",
+  },
+  {
+    id: "5",
+    title: "Website Maintenance",
+    value: "Safeguard your online presence with our reliable website maintenance services. A well-maintained website is crucial for optimal performance, security, and user experience. Our dedicated team offers proactive monitoring, timely updates, and continuous improvements to ensure your website stays functional, secure, and up-to-date with the latest technologies. From content updates and bug fixes to security patches and performance optimization, we handle all aspects of website maintenance. Let us take the burden off your shoulders, allowing you to focus on your core business while we keep your website running smoothly and efficiently. ",
+  },
+  {
+    id: "6",
+    title: "Network Configuration",
+    value: "Optimize your digital connectivity with our expert network configurations. We specialize in designing and implementing robust network solutions tailored to your requirements. From setting up secure and efficient wired or wireless networks to configuring routers, firewalls, and switches, our skilled technicians ensure seamless data flow and reliable connectivity. We prioritize network security, performance, and scalability, providing solutions that adapt to your evolving business needs. Trust us to streamline your network infrastructure, enhance data transfer speeds, and fortify your digital operations. Elevate your connectivity with our precise and customized network configuration.",
+  },
+]
