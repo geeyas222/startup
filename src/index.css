@@ -9,6 +9,11 @@
   background-color: rgb(73 63 63 / 75%) !important;
  }
 
+.ReactModal__Content {
+    border: none !important;
+    background: none !important;
+}
+
 :root {
   --black-gradient: linear-gradient(144.39deg,
       #ffffff -278.56%,

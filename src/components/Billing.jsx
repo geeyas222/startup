@@ -1,8 +1,26 @@
+import { useState } from "react";
 import { webman } from "../assets";
 import { Helmet } from "react-helmet";
 import styles, { layout } from "../style";
+import ModalDialog from "./ModalDialog";
+import Project from "./Project";
 
-const Billing = () => (
+
+const Billing = () => {
+  
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+  
+  const State = [
+    <>
+     <Project />
+    </>
+  ]
+  return (
+  
   <>
     <Helmet>
       <title>Soft Hat Solution</title>
@@ -33,13 +51,15 @@ const Billing = () => (
         </p>
 
         <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
-          <button type="button" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`}>
-            <a href="#projects"> Projects </a>
+          <button onClick={() => setModalIsOpen(true)} type="button" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles}`}>
+            <a> Projects </a>
           </button>
         </div>
       </div>
+      <ModalDialog
+         isOpen={modalIsOpen} closeModal={closeModal} content={State} />
     </section>
   </>
-);
+)};
 
 export default Billing;
