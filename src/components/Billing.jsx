@@ -31,7 +31,7 @@ const Billing = () => {
       <meta name="author" content="Your Name" />
       <meta name="robots" content="index, follow" />
     </Helmet>
-    <section id="service" className={layout.sectionReverse}>
+    <section id="projects" className={layout.sectionReverse}>
       <div className={layout.sectionImgReverse} data-aos='fade-right'>
         <img src={webman} alt="billing" className="w-[100%] h-[100%] relative z-[5]" loading="lazy"/>
 

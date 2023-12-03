@@ -2,32 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
-import { openLink } from "../assets";
-import { fadeIn } from "../utils/motion"
+import { fadeIn, textVariant } from "../utils/motion"
 
-import { projects } from "../constants/index";
+import { services } from "../constants/index";
 
-const Projects = ({
-    index,
-    name,
-    image,
-    source_code_link,
+const Services = ({
+    title,
+    value
 }) => {
-    const tiltRef = useRef(null);
-
-    useEffect(() => {
-        const handleOrientation = (event) => {
-            if (tiltRef.current) {
-                tiltRef.current.tilt.onDeviceMove(event);
-            }
-        };
-
-        window.addEventListener('deviceorientation', handleOrientation);
-
-        return () => {
-            window.removeEventListener('deviceorientation', handleOrientation);
-        };
-    }, []);
 
     return (
         <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="sm:ml-20">
@@ -41,26 +23,7 @@ const Projects = ({
                 className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
             >
                 <div className='relative w-full h-[230px]'>
-                    <img
-                        src={image}
-                        alt='project_image'
-                        className='w-full h-full object-cover rounded-2xl'
-                        loading="lazy"
-                    />
-
-                    <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-                        <div
-                            onClick={() => window.open(source_code_link, "_blank")}
-                            className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-                        >
-                            <img
-                                src={openLink}
-                                alt='source code'
-                                className='w-1/2 h-1/2 object-contain'
-                                loading="lazy"
-                            />
-                        </div>
-                    </div>
+                    <motion.h1>{title}</motion.h1>
                 </div>
 
                 <div className='mt-5'>
@@ -68,7 +31,7 @@ const Projects = ({
                         whileTap={{ scale: 0.8, color: 'grey' }}
                         className='text-white font-bold text-[24px] cursor-pointer'
                     >
-                        {name}
+                        {value}
                     </motion.h3>
                 </div>
             </Tilt>
@@ -76,16 +39,16 @@ const Projects = ({
     );
 };
 
-const Project = () => {
+const Service = () => {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleNextClick = () => {
-        setCurrentCardIndex((prevIndex) => (prevIndex + 1) % projects.length);
+        setCurrentCardIndex((prevIndex) => (prevIndex + 1) % services.length);
     };
 
     const handlePrevClick = () => {
-        setCurrentCardIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
+        setCurrentCardIndex((prevIndex) => (prevIndex - 1 + services.length) % services.length);
     };
 
     const handleModalToggle = () => {
@@ -104,12 +67,12 @@ const Project = () => {
                 </button>
 
                 <div>
-                    {projects.map((project, index) => (
+                    {services.map((service, index) => (
                         <div
-                            key={`project-${index}`}
+                            key={`service-${index}`}
                             className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 ${index === currentCardIndex ? '' : 'hidden'}`}
                         >
-                            <Projects {...project} />
+                            <Services {...service} />
                         </div>
                     ))}
                 </div>
@@ -125,4 +88,4 @@ const Project = () => {
     );
 };
 
-export default Project;
+export default Service;

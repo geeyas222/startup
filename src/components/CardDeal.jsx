@@ -3,6 +3,7 @@ import { IT } from "../assets";
 import { Helmet } from "react-helmet";
 import styles, { layout } from "../style";
 import ModalDialog from "./ModalDialog";
+import Service from "./services";
 
 const CardDeal = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -12,8 +13,7 @@ const CardDeal = () => {
   };
   const State = [
     <>
-      <h2>Modal Title</h2>
-      <p>Some text in the Modal...</p>
+      <Service />
     </>
   ]
   return (
@@ -27,7 +27,7 @@ const CardDeal = () => {
         <meta name="author" content="Your Name" />
         <meta name="robots" content="index, follow" />
       </Helmet>
-      <section className={layout.section}>
+      <section className={layout.section} id="service">
         <div className={layout.sectionInfo} data-aos='fade-left'>
           <h2 className={styles.heading2}>
             We fix your IT problems <br className="sm:block hidden" /> <span className="text-3xl">Small</span> to <span className="text-7xl">Big</span>
@@ -49,7 +49,7 @@ const CardDeal = () => {
           <img src={IT} alt="IT Services" className="w-[100%] h-[100%]" loading="lazy" />
         </div>
         <ModalDialog
-         isOpen={modalIsOpen} closeModal={closeModal} content={State}/>
+          isOpen={modalIsOpen} closeModal={closeModal} content={State} />
       </section>
     </>
   );

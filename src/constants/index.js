@@ -2,16 +2,12 @@ import { facebook, instagram, linkedin, twitter, send, shield, star, MCGarage, t
 
 export const navLinks = [
   {
-    id: "home",
-    title: "Home",
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "service",
     title: "Services",
-  },
-  {
-    id: "projects",
-    title: "Projects",
   },
   {
     id: "contact",

@@ -50,7 +50,7 @@ const App = () => {
               <Billing /> {/*responsice web app building service */}
               <CardDeal /> {/*Tech Support service*/}
               <Business /> {/*Design webapp for business service*/}
-              <Project /> {/*projects*/}
+              {/* <Project /> projects */}
 
               <CTA /> {/*contact us Form*/}
 
