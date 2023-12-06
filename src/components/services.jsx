@@ -7,19 +7,20 @@ import { fadeIn, textVariant } from "../utils/motion"
 import { services } from "../constants/index";
 
 const Services = ({
+    id,
     title,
     value
 }) => {
 
     return (
-        <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className="sm:ml-20">
+        <motion.div variants={fadeIn("up", "spring", id * 0.5, 0.75)} className="sm:ml-20">
             <Tilt
                 options={{
                     max: 45,
                     scale: 1,
                     speed: 450,
                 }}
-                ref={tiltRef}
+
                 className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
             >
                 <div className='relative w-full h-[230px]'>
@@ -69,7 +70,7 @@ const Service = () => {
                 <div>
                     {services.map((service, index) => (
                         <div
-                            key={`service-${index}`}
+                            key={index}
                             className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 ${index === currentCardIndex ? '' : 'hidden'}`}
                         >
                             <Services {...service} />
