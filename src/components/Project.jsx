@@ -103,24 +103,24 @@ const Project = () => {
             <div className="flex justify-between mt-4">
                 <button onClick={handlePrevClick} className="text-6xl text-white">
                     <span role="img" aria-label="Previous" className="cursor-pointer" onClick={handlePrevClick}>
-                    <FaAngleLeft />
+                        <FaAngleLeft />
                     </span>
                 </button>
 
-                <div style={{marginRight:'6rem'}}>
-                    {projects.map((project, index) => (
-                        <div
-                            key={`project-${index}`}
-                            className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 ${index === currentCardIndex ? '' : 'hidden'}`}
-                        >
-                            <Projects {...project} />
-                        </div>
-                    ))}
+                {/* <div style={{marginRight:'6rem'}}> */}
+                <div className="mr-0 md:mr-24">                    {projects.map((project, index) => (
+                    <div
+                        key={`project-${index}`}
+                        className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 ${index === currentCardIndex ? '' : 'hidden'}`}
+                    >
+                        <Projects {...project} />
+                    </div>
+                ))}
                 </div>
 
                 <button onClick={handleNextClick} className="text-6xl text-white">
                     <span role="img" aria-label="Next" className="cursor-pointer" onClick={handleNextClick}>
-                    <FaAngleRight />
+                        <FaAngleRight />
                     </span>
                 </button>
             </div>
