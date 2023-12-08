@@ -70,7 +70,7 @@ const Projects = ({
                 <div className='mt-5'>
                     <motion.h3
                         whileTap={{ scale: 0.8, color: 'grey' }}
-                        className='text-white font-bold text-[24px] cursor-pointer'
+                        className='text-white font-bold text-[23px] cursor-pointer'
                     >
                         {name}
                     </motion.h3>
