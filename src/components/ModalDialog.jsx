@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Modal from 'react-modal';
+import { IoMdClose } from "react-icons/io";
 const customStyles = {
   content: {
     top: '50%',
@@ -10,21 +11,29 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
   },
 };
-const ModalDialog = ({isOpen, closeModal,content}) => {
-  if(!isOpen) {
+const ModalDialog = ({ isOpen, closeModal, content }) => {
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
+
+
+  if (!isOpen) {
     return null;
   }
   return (
-   <Modal
-    isOpen={isOpen}
-    onRequestClose={closeModal}
-    contentLabel='Modal'
-    style={customStyles}>
-    {content}
-    <div>
-    <button type="button" className={`py-4 px-6 font-poppins font-medium text-center text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none mt-10`} onClick={closeModal}>Close Modal</button>
-    </div>
-      
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={closeModal}
+      contentLabel='Modal'
+      style={customStyles}>
+      <div className="modal-header">
+        <button onClick={closeModal} style={{ float: 'right' }}>
+          <IoMdClose className='text-white text-[25px] font-bold' />
+        </button>
+      </div>
+      <div className="modal-body">
+        {content}
+      </div>
+
+
     </Modal>
   )
 }

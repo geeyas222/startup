@@ -6,6 +6,9 @@ import { fadeIn, textVariant } from "../utils/motion"
 
 import { services } from "../constants/index";
 
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
+
 const Services = ({
     id,
     title,
@@ -23,7 +26,22 @@ const Services = ({
 
                 className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
             >
-                <div className='relative w-full h-[230px]'>
+                <div className="card">
+                    <div className="card-body">
+                        <div className='relative w-full text-white font-bold'>
+                            <motion.h1>{title}</motion.h1>
+                        </div>
+                        <div className='mt-5'>
+                            <motion.p
+                                whileTap={{ scale: 0.8, color: 'grey' }}
+                                className='text-white text-[15px] cursor-pointer text-justify'
+                            >
+                                {value}
+                            </motion.p>
+                        </div>
+                    </div>
+                </div>
+                {/* <div className='relative w-full h-[230px]'>
                     <motion.h1>{title}</motion.h1>
                 </div>
 
@@ -34,7 +52,7 @@ const Services = ({
                     >
                         {value}
                     </motion.h3>
-                </div>
+                </div> */}
             </Tilt>
         </motion.div>
     );
@@ -63,11 +81,11 @@ const Service = () => {
             <div className="flex justify-between mt-4">
                 <button onClick={handlePrevClick} className="text-6xl text-white">
                     <span role="img" aria-label="Previous" className="cursor-pointer" onClick={handlePrevClick}>
-                        👈
+                        <FaAngleLeft />
                     </span>
                 </button>
 
-                <div>
+                <div className="mr-10 md:mr-24 lg:mr-24">
                     {services.map((service, index) => (
                         <div
                             key={index}
@@ -80,7 +98,7 @@ const Service = () => {
 
                 <button onClick={handleNextClick} className="text-6xl text-white">
                     <span role="img" aria-label="Next" className="cursor-pointer" onClick={handleNextClick}>
-                        👉
+                        <FaAngleRight />
                     </span>
                 </button>
             </div>
