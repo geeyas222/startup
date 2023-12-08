@@ -7,6 +7,10 @@ import { fadeIn } from "../utils/motion"
 
 import { projects } from "../constants/index";
 
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
+
+
 const Projects = ({
     index,
     name,
@@ -99,11 +103,11 @@ const Project = () => {
             <div className="flex justify-between mt-4">
                 <button onClick={handlePrevClick} className="text-6xl text-white">
                     <span role="img" aria-label="Previous" className="cursor-pointer" onClick={handlePrevClick}>
-                        👈
+                    <FaAngleLeft />
                     </span>
                 </button>
 
-                <div>
+                <div style={{marginRight:'6rem'}}>
                     {projects.map((project, index) => (
                         <div
                             key={`project-${index}`}
@@ -116,7 +120,7 @@ const Project = () => {
 
                 <button onClick={handleNextClick} className="text-6xl text-white">
                     <span role="img" aria-label="Next" className="cursor-pointer" onClick={handleNextClick}>
-                        👉
+                    <FaAngleRight />
                     </span>
                 </button>
             </div>
