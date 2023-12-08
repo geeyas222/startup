@@ -107,15 +107,15 @@ const Project = () => {
                     </span>
                 </button>
 
-                {/* <div style={{marginRight:'6rem'}}> */}
-                <div className="mr-0 md:mr-24">                    {projects.map((project, index) => (
-                    <div
-                        key={`project-${index}`}
-                        className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 ${index === currentCardIndex ? '' : 'hidden'}`}
-                    >
-                        <Projects {...project} />
-                    </div>
-                ))}
+                <div className="mr-10 md:mr-24 lg:mr-24">
+                    {projects.map((project, index) => (
+                        <div
+                            key={`project-${index}`}
+                            className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2 ${index === currentCardIndex ? '' : 'hidden'}`}
+                        >
+                            <Projects {...project} />
+                        </div>
+                    ))}
                 </div>
 
                 <button onClick={handleNextClick} className="text-6xl text-white">
