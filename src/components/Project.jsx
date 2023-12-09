@@ -107,7 +107,7 @@ const Project = () => {
                     </span>
                 </button>
 
-                <div className="mr-10 md:mr-24 lg:mr-24">
+                <div className="md:mr-24 lg:mr-24">
                     {projects.map((project, index) => (
                         <div
                             key={`project-${index}`}

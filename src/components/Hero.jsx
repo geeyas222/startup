@@ -2,6 +2,7 @@ import styles from "../style";
 import { Helmet } from "react-helmet";
 import { discount, home } from "../assets";
 import { Typewriter } from 'react-simple-typewriter'
+import { services } from "../constants";
 
 const Hero = () => {
   return (
@@ -26,7 +27,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-row justify-between items-center w-full">
-            <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
+            <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[48px] text-white ss:leading-[100.8px] leading-[75px]">
               Empowering<br className="sm:block hidden" />{" "} Your Tomorrow,<br className="sm:block hidden" />{" "}Today with<br className="sm:block hidden" />{" "}
               <span className="text-gradient">SoftHat</span>{" "}
             </h1>
@@ -37,9 +38,9 @@ const Hero = () => {
           <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
             Solution
           </h1>
-          <h1 className="text-gradient font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
+          <h1 className="text-gradient font-poppins font-semibold ss:text-[68px] text-[40px] text-white ss:leading-[100.8px] leading-[75px] w-full">
             <Typewriter
-              words={['Eat', 'Sleep', 'Code', 'Repeat!']}
+              words={services.map(service => service.title)}
               loop={5}
               cursor
               cursorStyle='_'
