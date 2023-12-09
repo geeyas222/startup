@@ -1,6 +1,7 @@
 import styles from "../style";
 import { Helmet } from "react-helmet";
 import { discount, home } from "../assets";
+import { Typewriter } from 'react-simple-typewriter'
 
 const Hero = () => {
   return (
@@ -17,7 +18,7 @@ const Hero = () => {
       <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
         <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 py-16`} data-aos='fade-right'>
           <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
-            <img src={discount} alt="discount" className="w-[32px] h-[32px]" loading="lazy"/>
+            <img src={discount} alt="discount" className="w-[32px] h-[32px]" loading="lazy" />
             <p className={`${styles.paragraph} ml-2`}>
               <span className="text-white">20%</span> Discount For{" "}
               <span className="text-white">New</span> Customer
@@ -36,19 +37,30 @@ const Hero = () => {
           <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
             Solution
           </h1>
+          <h1 className="text-gradient font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
+            <Typewriter
+              words={['Eat', 'Sleep', 'Code', 'Repeat!']}
+              loop={5}
+              cursor
+              cursorStyle='_'
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </h1>
           <p className={`${styles.paragraph} max-w-[470px] mt-5 text-justify`}>
             <span className="text-blue-[300]"> "Elevate Your Online Business with <a href="#home" className="text-blue-300"> SoftHat Solution</a> Designing Solutions, Delivering Success. Your Vision, Our Expertise, Success Achieved. Transforming Challenges into Digital Triumphs. Your Success, Our Commitment."</span>
           </p>
         </div>
 
         <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`} data-aos='fade-left'>
-          <img src={home} alt="billing" className="w-[100%] h-[100%] relative z-[5]" loading="lazy"/>
+          <img src={home} alt="billing" className="w-[100%] h-[100%] relative z-[5]" loading="lazy" />
         </div>
 
         <div className={`ss:hidden ${styles.flexCenter}`}>
 
         </div>
-      </section>
+      </section >
     </>
   );
 };
