@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from './style';
-import { Navbar, Hero, Stats, Business, CardDeal, CTA, Footer, Billing, Aboutus, Project, StarsCanvas, IdeaDrop } from './components';
+import { Navbar, Hero, Stats, Business, CardDeal, CTA, Footer, Billing, Aboutus, StarsCanvas, IdeaDrop } from './components';
 import { BrowserRouter } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

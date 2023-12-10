@@ -76,10 +76,6 @@ export const footerLinks = [
         link: "#projects",
       },
       {
-        name: "Pricing",
-        link: "#price",
-      },
-      {
         name: "Contact Us",
         link: "#contact",
       },
@@ -102,7 +98,7 @@ export const footerLinks = [
         link: "tel:+61452292114",
       },
       {
-        name: "Drop the idea",
+        name: "Drop the idea for Website",
         link: "#contact",
       },
 

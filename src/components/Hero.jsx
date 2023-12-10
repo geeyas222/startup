@@ -41,7 +41,7 @@ const Hero = () => {
           <h1 className="text-gradient font-poppins font-semibold ss:text-[68px] text-[40px] text-white ss:leading-[100.8px] leading-[75px] w-full">
             <Typewriter
               words={services.map(service => service.title)}
-              loop={5}
+              loop={999}
               cursor
               cursorStyle='_'
               typeSpeed={70}
