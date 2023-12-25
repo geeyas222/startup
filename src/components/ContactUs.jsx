@@ -47,7 +47,7 @@ const ContactUs = () => {
         if (!Object.values(newErrors).some((error) => error !== '')) {
             // Prepare the email parameters
             const emailParams = {
-                to_email: "softhatsolution@gmail.com", // Replace with your recipient email address
+                to_email: "softhatsolution@gmail.com",
                 from_name: formData.name,
                 from_email: formData.email,
                 from_phone: formData.phone,
