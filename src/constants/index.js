@@ -99,7 +99,7 @@ export const footerLinks = [
       },
       {
         name: "Drop the idea for Website",
-        link: "#contact",
+        link: "#ideaDrop",
       },
 
     ],
