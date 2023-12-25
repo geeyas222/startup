@@ -37,8 +37,7 @@ const Navbar = () => {
       </Helmet>
 
       <nav className="w-full bottom-0 flex py-6 justify-between items-center navbar transition-all duration-200" data-aos='zoom-in-down' data-aos-duration='1300'>
-
-        <img src={logo} alt="hoobank" className={`w-[222px] h-[32px]`} loading="lazy" />
+        <a href="#home"><img src={logo} alt="hoobank" className={`w-[222px] h-[32px]`} loading="lazy" /></a>
 
         <ul className="list-none sm:flex hidden justify-end items-center flex-1">
           {navLinks.map((nav, index) => (
