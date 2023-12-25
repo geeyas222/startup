@@ -38,7 +38,7 @@ const Hero = () => {
           <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
             Solution
           </h1>
-          <span className="text-gradient font-poppins font-semibold ss:text-[48px] text-[40px] text-white ss:leading-[100.8px] leading-[75px] w-full h-[150px]">
+          <h1 className="text-gradient font-poppins font-semibold ss:text-[48px] text-[40px] text-white ss:leading-[100.8px] leading-[75px] w-full h-[150px]">
             <Typewriter
               words={services.map(service => service.title)}
               loop={999}
@@ -48,7 +48,7 @@ const Hero = () => {
               deleteSpeed={60}
               delaySpeed={1000}
             />
-          </span>
+          </h1>
           <p className={`${styles.paragraph} max-w-[470px] mt-5 text-justify`}>
             <span className="text-blue-[300]"> "Elevate Your Online Business with <a href="#home" className="text-blue-300"> SoftHat Solution</a> Designing Solutions, Delivering Success. Your Vision, Our Expertise, Success Achieved. Transforming Challenges into Digital Triumphs. Your Success, Our Commitment."</span>
           </p>
