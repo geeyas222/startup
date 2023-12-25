@@ -39,7 +39,6 @@ const Business = () => (
         At <a href="#home" className="text-blue-300"> SoftHat Solution</a>, we understand the demands of running a successful business. Let us take the reins of your online journey - from designing captivating websites to establishing your digital footprint. Our tailored solutions empower you to concentrate on what you do best, while we seamlessly translate your vision into a compelling online reality that resonates with your audience and drives growth.
       </p>
 
-      {/* <Button styles={`mt-10`} /> */}
     </div>
 
     <div className={`${layout.sectionImg} flex-col`} data-aos='fade-left'>

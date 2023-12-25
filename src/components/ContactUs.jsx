@@ -41,7 +41,7 @@ const ContactUs = () => {
             email: emailRegex.test(formData.email) ? '' : 'Invalid email address',
             phone: phoneRegex.test(formData.phone) ? '' : 'Invalid phone number',
         };
-        
+
         setErrors(newErrors);
         setSpinner(true);
         if (!Object.values(newErrors).some((error) => error !== '')) {
@@ -57,12 +57,13 @@ const ContactUs = () => {
             // Use the EmailJS service to send the email
             try {
                 await emailjs.send(
-                    'service_aex7qzk', // Replace with your EmailJS service ID
-                    'template_sewp5co', // Replace with your EmailJS template ID
+                    'service_aex7qzk', // EmailJS service ID
+                    'template_sewp5co', // EmailJS template ID
                     emailParams,
-                    'cL4-EtHANHUHjHF1V' // Replace with your EmailJS user ID
+                    'cL4-EtHANHUHjHF1V' // EmailJS user ID
                 );
-                    showSuccess('Email sent successfully')
+                setSpinner(true);
+                showSuccess('Email sent successfully')
                 // Reset the form fields
                 setFormData({
                     name: '',
@@ -80,7 +81,7 @@ const ContactUs = () => {
                 });
             } catch (error) {
                 showError('Error sending email');
-                console.error('Error sending email:', error);
+                toast.error('Error sending email:', error);
             }
         }
     };
@@ -119,7 +120,7 @@ const ContactUs = () => {
 
                 <div>
                     <button type="submit" className={`w-[300px] md:w-[300px] sm:w-[200px] py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles} mt-10`}>
-                    {isSpinner ? <Spinner /> : ''}
+                        {/* {isSpinner ? <Spinner /> : ''} */}
                         Submit
                     </button>
                 </div>

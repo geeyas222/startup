@@ -38,7 +38,6 @@ const CardDeal = () => {
             <a href="#home" className="text-blue-300"> SoftHat Solution </a> is always there for you!
           </p>
 
-          {/* <Button styles={`mt-10`} /> */}
           <button onClick={() => setModalIsOpen(true)} type="button" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles} mt-10`}>
             <a >Services</a>
           </button>

@@ -97,23 +97,15 @@ export const footerLinks = [
         name: "Telphone - +61 452292114",
         link: "tel:+61452292114",
       },
-      {
-        name: "Drop the idea for Website",
-        link: "#ideaDrop",
-      },
 
     ],
   },
   {
-    title: "Partner",
+    title: "Forms",
     links: [
       {
-        name: "Carrers",
-        link: "#home",
-      },
-      {
-        name: "Sponsor",
-        link: "#home",
+        name: "Drop the idea for Website",
+        link: "#ideaDrop",
       },
     ],
   },

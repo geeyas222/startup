@@ -1,21 +1,19 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { logo } from '../assets';
 import { footerLinks, socialMedia } from '../constants';
 import IdeaDrop from './dropidea';
 import styles from '../style';
-import ModalDialog from "./ModalDialog";
 
 const Footer = () => {
   const [showIdeaDrop, setShowIdeaDrop] = useState(false);
 
   const handleDropIdeaClick = () => {
-    // Set the state to show the IdeaDrop modal when clicked
+    //  the state to show the IdeaDrop modal when clicked
     setShowIdeaDrop(true);
   };
 
   const handleCloseModal = () => {
-    // Set the state to hide the IdeaDrop modal when the close button is clicked
+    //  the state to hide the IdeaDrop modal when the close button is clicked
     setShowIdeaDrop(false);
   };
 
@@ -27,7 +25,6 @@ const Footer = () => {
       </Helmet>
 
       <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
-        {/* Rest of your code */}
         <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
           {footerLinks.map((footerlink) => (
             <div key={footerlink.title} className={`flex flex-col ss:my-0 my-4 min-w-[150px]`}>
@@ -62,9 +59,6 @@ const Footer = () => {
           )}
         </div>
 
-        {/* <ModelDialog id="ideaDrop" isOpen={modalIsOpen} closeModal={closeModal} content={State} /> */}
-
-        {/* Rest of your code */}
       </section>
 
       {/* Footer content */}
