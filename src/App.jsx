@@ -4,6 +4,7 @@ import { Navbar, Hero, Stats, Business, CardDeal, CTA, Footer, Billing, Aboutus,
 import { BrowserRouter } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Serv from "./components/services";
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -49,6 +50,7 @@ const App = () => {
               <Stats /> {/*Stats with counter  */}
               <Billing /> {/*responsice web app building service */}
               <CardDeal /> {/*Tech Support service*/}
+              <Serv />
               <Business /> {/*Design webapp for business service*/}
               {/* <Project /> projects */}
 

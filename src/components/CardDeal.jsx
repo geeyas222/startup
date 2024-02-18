@@ -4,9 +4,11 @@ import { Helmet } from "react-helmet";
 import styles, { layout } from "../style";
 import ModalDialog from "./ModalDialog";
 import Service from "./services";
+import { services } from "../constants/index";
 
 const CardDeal = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedTab, setSelectedTab] = useState(services[0]);
 
   const closeModal = () => {
     setModalIsOpen(false);
@@ -27,7 +29,7 @@ const CardDeal = () => {
         <meta name="author" content="Your Name" />
         <meta name="robots" content="index, follow" />
       </Helmet>
-      <section className={layout.section} id="service">
+      <section className={layout.section} id="">
         <div className={layout.sectionInfo} data-aos='fade-left'>
           <h2 className={styles.heading2}>
             We fix your IT problems <br className="sm:block hidden" /> <span className="text-3xl">Small</span> to <span className="text-7xl">Big</span>
@@ -38,17 +40,11 @@ const CardDeal = () => {
             <a href="#home" className="text-blue-300"> SoftHat Solution </a> is always there for you!
           </p>
 
-          <button onClick={() => setModalIsOpen(true)} type="button" className={`py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${styles} mt-10`}>
-            <a >Services</a>
-          </button>
-
         </div>
 
         <div className={layout.sectionImg} data-aos='fade-right'>
           <img src={IT} alt="IT Services" className="w-[100%] h-[100%]" loading="lazy" />
         </div>
-        <ModalDialog
-          isOpen={modalIsOpen} closeModal={closeModal} content={State} />
       </section>
     </>
   );
